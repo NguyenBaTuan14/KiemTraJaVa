@@ -1,17 +1,19 @@
 package NguyenBaTuan_2021606840;
-
+import java.util.*;
 public class Product implements Comparable<Product> {
 	
+	static Scanner sc = new Scanner(System.in);
 	
-	private int product_id;
-	private String product_name;
-	private double product_price;
-	private int product_total;
+	
+	protected int product_id;
+	protected String product_name;
+	protected double product_price;
+	protected int product_total;
 	public Product() {
-		super();
+		this(null,0.0,0);
 	}
 	public Product(String product_name, double product_price, int product_total) {
-		super();
+		
 		
 		this.product_name = product_name;
 		this.product_price = product_price;
@@ -43,14 +45,24 @@ public class Product implements Comparable<Product> {
 	}
 	@Override
 	public String toString() {
-		return String.format("id=%d, name=%s, price=%.2f, total=%d, ",
+		return String.format("TV: id=%d, name=%s, price=%.2f, total=%d, ",
                 getProduct_id(),
                 getProduct_name(),
                 getProduct_price(),
                 getProduct_total() );
 	}
 	
-	
+	public void input() {
+		System.out.print("Input product_id: ");
+		product_id=sc.nextInt();
+		sc.nextLine();
+		System.out.print("Input product_name: ");
+		product_name=sc.nextLine();
+		System.out.print("Input product_price: ");
+		product_price=sc.nextDouble();
+		System.out.print("Input product_total: ");
+		product_total=sc.nextInt();
+	}
 	@Override
 	public int compareTo(Product o) {
 		// TODO Auto-generated method stub

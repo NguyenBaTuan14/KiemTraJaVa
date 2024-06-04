@@ -10,15 +10,13 @@ public interface TVManager {
 	
 	public boolean delTV(TV t);
 	
-	public List<TV> searchTVByName(String name);
+	public List<TV> searchTV(String name);
 	
-	public List<TV> searchTVByPrice(double price);
 	
-	public List<TV> searchTVByColor(String color);
 	
-	public List<TV> sortedTVByPrice(double price, boolean isINC);
+	public List<TV> sortedTV(double price);
 	
-	public List<TV> sortedTVBySize(double size, boolean isINC);
+	
 	
 	public void printInfo();
 	
